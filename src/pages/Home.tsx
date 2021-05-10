@@ -6,24 +6,26 @@ import ThemeControl from '../components/ThemeControl';
 import './Home.css';
 
 const Home: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <Brand/>
-          <ThemeControl/>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
-      </IonContent>
-    </IonPage>
-  );
+    return (
+        <IonPage>
+            <IonHeader>
+                <IonToolbar>
+                    <div className="toolbar-inner-container">
+                        <Brand/>
+                        <ThemeControl/>
+                    </div>
+                </IonToolbar>
+            </IonHeader>
+            <IonContent fullscreen>
+                <IonHeader collapse="condense">
+                    <IonToolbar>
+                        <IonTitle size="large">Blank</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
+                <ExploreContainer />
+            </IonContent>
+        </IonPage>
+    );
 };
 
 export default Home;

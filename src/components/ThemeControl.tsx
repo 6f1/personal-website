@@ -1,6 +1,7 @@
 import { Storage } from '@ionic/storage';
-import { IonToggle } from '@ionic/react';
+import { IonToggle, IonLabel } from '@ionic/react';
 import { useEffect, useState } from 'react';
+import './ThemeControl.css';
 
 const ThemeControl : React.FC = () => {
     const [ selectedTheme, setSelectedTheme ] = useState('');
@@ -30,8 +31,9 @@ const ThemeControl : React.FC = () => {
     },[ selectedTheme ]);
 
     return(
-        <div>
-            <IonToggle checked={(selectedTheme === 'dark') ? true : false} onIonChange={(e) => setSelectedTheme((e.detail.checked) ? 'dark' : 'light')}/>
+        <div className="irtc-container">
+            <IonLabel>{ selectedTheme }</IonLabel>
+            <IonToggle color="dark" checked={(selectedTheme === 'dark') ? true : false} onIonChange={(e) => setSelectedTheme((e.detail.checked) ? 'dark' : 'light')}/>
         </div>
     );
 };

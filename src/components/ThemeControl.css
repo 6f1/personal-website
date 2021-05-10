@@ -1,0 +1,5 @@
+.irtc-container {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
