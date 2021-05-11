@@ -1,3 +1,8 @@
 .fake-img {
     background: var(--ion-s-background);
 }
+
+.clean-image-img {
+    object-fit: cover;
+    width: 100%;
+}

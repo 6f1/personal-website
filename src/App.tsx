@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import Projects from './pages/Projects';
 import ProjectInfo from './pages/ProjectInfo';
 
 /* Core CSS required for Ionic components to work properly */
@@ -26,25 +27,33 @@ import './theme/variables.css';
 /* Additional fonts */
 import './fonts/lexend-peta/lexend-peta.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/protoplay">
-            <ProjectInfo/>
-        </Route>
-        <Route exact path="/design">
-            <ProjectInfo/>
-        </Route>
-        <Route>
-          <Redirect to="/" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+    useEffect(() => {
+        document.title = "Samuel Shoemaker";
+    },[ ]);
+    return (
+      <IonApp>
+        <IonReactRouter>
+          <IonRouterOutlet>
+            <Route exact path="/">
+                <Projects />
+            </Route>
+            <Route exact path="/projects">
+                <Projects/>
+            </Route>
+            <Route exact path="/projects/protoplay">
+                <ProjectInfo project="protoplay"/>
+            </Route>
+            <Route exact path="/projects/design">
+                <ProjectInfo project="design"/>
+            </Route>
+            <Route>
+              <Redirect to="/" />
+            </Route>
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    );
+};
 
 export default App;

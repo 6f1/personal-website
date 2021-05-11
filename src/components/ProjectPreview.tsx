@@ -14,7 +14,7 @@ const ProjectPreview : React.FC<{ title : string, source : string, infoLink : st
                     <IonButton routerDirection="forward" routerLink={infoLink} fill="outline">
                         View Info
                     </IonButton>
-                    <IonButton routerDirection="forward" routerLink={projectLink} fill="outline" color="secondary">
+                    <IonButton routerDirection="forward" href={projectLink} fill="outline" color="secondary">
                         Visit {title}
                     </IonButton>
                 </div>

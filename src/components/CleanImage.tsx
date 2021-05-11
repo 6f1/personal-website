@@ -7,7 +7,7 @@ const CleanImage : React.FC<{ source : string, size? : { x : number, y : number 
     return (
         <div className="clean-image-container">
             <div className="fake-img" style={{ display : (shouldDisplay) ? undefined : "hidden" }}/>
-            <img src={source} onLoad={() => setShouldDisplay(true)} onError={() => setShouldDisplay(false)} style={{ display : (shouldDisplay) ? "hidden" : undefined }}/>
+            <img className="clean-image-img" src={source} onLoad={() => setShouldDisplay(true)} onError={() => setShouldDisplay(false)} style={{ display : (shouldDisplay) ? "hidden" : undefined }}/>
         </div>
     );
 };

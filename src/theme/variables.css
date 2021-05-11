@@ -84,7 +84,7 @@ http://ionicframework.com/docs/theming/ */
    * -------------------------------------------
    */
 
-body.dark {
+body {
     --ion-color-primary: #FC8BDE;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
@@ -148,6 +148,26 @@ body.dark {
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
 
+    /* background colors */
+    --ion-p-background-color: #4B8DA6;
+    --ion-p-background-color-rgb: 2, 47, 64;
+    --ion-p-background-text-color: #ffffff;
+    --ion-p-background-text-color-rgb: 255, 255, 255;
+
+    --ion-s-background-color: #3A80AB;
+    --ion-s-background-color-rgb: 24, 52, 70;
+    --ion-s-background-text-color: #ffffff;
+    --ion-s-background-text-color-rgb: 255, 255, 255;
+
+    --ion-t-background-color: #416E8C;
+    --ion-t-background-color-rgb: 15, 32, 43;
+    --ion-t-background-text-color: #ffffff;
+    --ion-t-background-text-color-rgb: 255, 255, 255;
+
+}
+
+/* dark theme */
+body.dark {
     /* background colors */
     --ion-p-background-color: #022F40;
     --ion-p-background-color-rgb: 2, 47, 64;

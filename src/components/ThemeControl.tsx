@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import './ThemeControl.css';
 
 const ThemeControl : React.FC = () => {
-    const [ selectedTheme, setSelectedTheme ] = useState('');
+    const [ selectedTheme, setSelectedTheme ] = useState('dark');
 
     useEffect(() => {
         window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => setSelectedTheme((e.matches) ? 'dark' : 'light'));
