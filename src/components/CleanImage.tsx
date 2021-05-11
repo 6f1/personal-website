@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './CleanImage.css';
 
-const CleanImage : React.FC<{ source : string, size : { x : number, y : number } }> = ({ source, size }) => {
+const CleanImage : React.FC<{ source : string, size? : { x : number, y : number } }> = ({ source, size }) => {
     const [ shouldDisplay, setShouldDisplay ] = useState(false);
 
     return (

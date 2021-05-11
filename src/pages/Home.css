@@ -1,7 +1,22 @@
 .toolbar-inner-container {
     display: inline-flex;
     width: 100%;
-    padding: 0 .5rem;
+    padding: 0 1rem;
     align-items: center;
     justify-content: space-between;
+}
+
+.page-footer {
+    width: 100%;
+    height: 50px;
+    background: var(--ion-t-background-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-footer .e-link-container ion-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: .5rem;
 }
