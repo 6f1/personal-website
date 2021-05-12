@@ -10,7 +10,7 @@ const landingText = "Relative diplomat disaster compete aluminium cunning. Pier 
 const Landing : React.FC = () => (
     <Template title="Samuel Shoemaker">
         <div className="landing-top">
-            <CleanImage source=""/>
+            <CleanImage source={"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"}/>
         </div>
         <div className="landing-page-splitter">
             <Brand visible={true} size={78}/>
@@ -22,7 +22,7 @@ const Landing : React.FC = () => (
                     <IonText>{ landingText }</IonText>
                     <div className="button-container">
                         <IonButton fill="outline" href="/resume.txt" download="resume.txt">
-                            {"Resume"}
+                            {"Résumé"}
                             <IonIcon icon={download}/>
                         </IonButton>
                         <IonButton fill="outline" color="tertiary" routerLink="/projects" href="/projects">

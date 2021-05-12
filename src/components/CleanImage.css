@@ -17,6 +17,7 @@
 .clean-image-img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;

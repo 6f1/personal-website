@@ -33,16 +33,13 @@ const App: React.FC = () => {
     /* Themeing system logic */
     const [ selectedTheme, setSelectedTheme ] = useState('dark');
     useEffect(() => {
-        (window as any).triggerBrandChange = [];
         window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => setSelectedTheme((e.matches) ? 'dark' : 'light'));
-
-        const initStore = async () => {
+        (async () => {
             const store = new Storage();
             await store.create();
             const data = await store.get('irtcSelectedTheme');
             ( data ) ? setSelectedTheme(data) : await store.set('irtcSelectedTheme', selectedTheme);
-        };
-        initStore();
+        })();
     },[ ]);
 
     // make changes to theme visible/active

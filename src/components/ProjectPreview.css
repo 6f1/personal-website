@@ -18,3 +18,18 @@
     justify-content: center;
     font-size: 2.5rem;
 }
+
+@media screen and (max-width : 500px) {
+    .project-preview-container {
+        height: 50%;
+    }
+
+    .project-preview-container .project-preview-overlay {
+        padding: 0 .5rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .project-preview-container .project-preview-overlay div:first-of-type {
+        width: 100%;
+    }
+}

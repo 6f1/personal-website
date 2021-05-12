@@ -1,0 +1,7 @@
+.header-ios.header-collapse-none.header-collapse-main.header-collapse-condense-inactive .toolbar-inner-container ion-router-link,
+.plt-mobile .invisible,
+.ios .ios-invisible,
+.md.plt-desktop .toolbar-inner-container ion-buttons,
+.md.plt-mobile .toolbar-inner-container ion-buttons:not(.invisible) ~ .brand-header-container {
+    display: none;
+}
