@@ -1,8 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel, IonRouterLink, IonIcon } from '@ionic/react';
-import Brand from '../components/Brand';
-import ThemeControl from '../components/ThemeControl';
+import Template from './Template';
 import ProjectPreview from '../components/ProjectPreview';
-import PageFooter from '../components/PageFooter';
 import './Projects.css';
 
 const projects = [
@@ -20,32 +17,12 @@ const projects = [
     },
 ];
 
-const Projects: React.FC = () => {
-    return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <div className="toolbar-inner-container">
-                        <div>
-                            <Brand visible={true}/>
-                        </div>
-                        <ThemeControl/>
-                    </div>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent fullscreen forceOverscroll={true}>
-                <IonHeader collapse="condense" translucent={true}>
-                    <IonToolbar>
-                        <IonTitle size="large" color="primary">Samuel Shoemaker</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                {projects.map((project) => (
-                    <ProjectPreview {...project}/>
-                ))}
-                <PageFooter />
-            </IonContent>
-        </IonPage>
-    );
-};
+const Projects: React.FC = () => (
+    <Template title="My Projects">
+        {projects.map((project) => (
+            <ProjectPreview key={project.source} {...project}/>
+        ))}
+    </Template>
+);
 
 export default Projects;

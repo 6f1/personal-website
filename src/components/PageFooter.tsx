@@ -21,7 +21,7 @@ const PageFooter : React.FC = () => (
     <div className="p-footer-outer">
         <div className="page-footer">
             {externalLinks.map((entry) => (
-                <div className="e-link-container">
+                <div className="e-link-container" key={entry.icon}>
                     <IonRouterLink href={entry.link}>
                         <IonIcon icon={entry.icon}/>
                     </IonRouterLink>
