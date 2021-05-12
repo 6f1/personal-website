@@ -2,3 +2,17 @@
     width: 32px;
     height: 32px;
 }
+
+.brand-container .img {
+    background-image: url('http://localhost:8100/assets/icon/icon-light.png');
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.dark .brand-container .img {
+    background: url('http://localhost:8100/assets/icon/icon.png');
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}

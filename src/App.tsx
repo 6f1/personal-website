@@ -1,9 +1,11 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import { useState, useEffect } from 'react';
 import Landing from './pages/Landing';
 import Projects from './pages/Projects';
 import ProjectInfo from './pages/ProjectInfo';
+import { Storage } from '@ionic/storage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -27,28 +29,59 @@ import './theme/variables.css';
 /* Additional fonts */
 import './fonts/lexend-peta/lexend-peta.css';
 
-const App: React.FC = () => (
-    <IonApp>
-        <IonReactRouter>
-            <IonRouterOutlet>
-                <Route exact path="/">
-                    <Landing />
-                </Route>
-                <Route exact path="/projects">
-                    <Projects/>
-                </Route>
-                <Route exact path="/projects/protoplay">
-                    <ProjectInfo project="protoplay"/>
-                </Route>
-                <Route exact path="/projects/design">
-                    <ProjectInfo project="design"/>
-                </Route>
-                <Route>
-                    <Redirect to="/" />
-                </Route>
-            </IonRouterOutlet>
-        </IonReactRouter>
-    </IonApp>
-);
+const App: React.FC = () => {
+    /* Themeing system logic */
+    const [ selectedTheme, setSelectedTheme ] = useState('dark');
+    useEffect(() => {
+        (window as any).triggerBrandChange = [];
+        window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => setSelectedTheme((e.matches) ? 'dark' : 'light'));
+
+        const initStore = async () => {
+            const store = new Storage();
+            await store.create();
+            const data = await store.get('irtcSelectedTheme');
+            ( data ) ? setSelectedTheme(data) : await store.set('irtcSelectedTheme', selectedTheme);
+        };
+        initStore();
+    },[ ]);
+
+    // make changes to theme visible/active
+    useEffect(() => {
+        document.body.classList.toggle('dark', (selectedTheme === 'dark'));
+    },[ selectedTheme ]);
+
+    // allow theme changes from anywhere
+    (window as any).triggerThemeChange = async (theme : 'light' | 'dark') => {
+        const store = new Storage();
+        await store.create();
+        await store.set('irtcSelectedTheme', theme);
+        setSelectedTheme(theme);
+    };
+    (window as any).getCurrentTheme = () => selectedTheme;
+
+    return (
+        <IonApp>
+            <IonReactRouter>
+                <IonRouterOutlet>
+                    <Route exact path="/">
+                        <Landing />
+                    </Route>
+                    <Route exact path="/projects">
+                        <Projects/>
+                    </Route>
+                    <Route exact path="/projects/protoplay">
+                        <ProjectInfo project="protoplay"/>
+                    </Route>
+                    <Route exact path="/projects/design">
+                        <ProjectInfo project="design"/>
+                    </Route>
+                    <Route>
+                        <Redirect to="/" />
+                    </Route>
+                </IonRouterOutlet>
+            </IonReactRouter>
+        </IonApp>
+    );
+};
 
 export default App;
