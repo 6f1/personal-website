@@ -7,6 +7,7 @@ type ProjectDataEntry = {
     infoLink : string;
     workEntries : Array<{
         previewAsset : string;
+        title : string;
         description : string;
     }>
 };

@@ -32,9 +32,15 @@ const appData : AppData = {
             infoLink : "/projects/protoplay",
             workEntries : [
                 {
-                    previewAsset : "",
-                    description : ""
-                }
+                    previewAsset : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title : "Apps for iOS App Store and Android Play Store",
+                    description : "I constructed and published the ProtoPlay apps on both the Apple AppStore and the Google PlayStore for Android."
+                },
+                {
+                    previewAsset : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title : "Static Website construction",
+                    description : "I constructed a static website / web app and completed a full serverless pipeline."
+                },
             ]
         },
         {
@@ -46,6 +52,7 @@ const appData : AppData = {
             workEntries : [
                 {
                     previewAsset : "",
+                    title : "",
                     description : ""
                 }
             ]
