@@ -1,0 +1,12 @@
+.pi-container .project-banner {
+    height: 300px;
+    width: 100%;
+    max-width: 1500px;
+    margin:0 auto;
+}
+
+.pi-container .main-text-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: .5rem auto;
+}

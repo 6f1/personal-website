@@ -6,6 +6,7 @@ import Landing from './pages/Landing';
 import Projects from './pages/Projects';
 import ProjectInfo from './pages/ProjectInfo';
 import { Storage } from '@ionic/storage';
+import appData from './dataConstants';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -66,12 +67,11 @@ const App: React.FC = () => {
                     <Route exact path="/projects">
                         <Projects/>
                     </Route>
-                    <Route exact path="/projects/protoplay">
-                        <ProjectInfo project="protoplay"/>
-                    </Route>
-                    <Route exact path="/projects/design">
-                        <ProjectInfo project="design"/>
-                    </Route>
+                    {appData.projectData.map((project) => (
+                        <Route exact path={project.infoLink} key={project.infoLink}>
+                            <ProjectInfo {...project}/>
+                        </Route>
+                    ))}
                     <Route>
                         <Redirect to="/" />
                     </Route>

@@ -1,20 +1,23 @@
 import { IonLabel, IonButton } from '@ionic/react';
 import CleanImage from './CleanImage';
+import { ProjectDataEntry } from '../types/Data';
 import './ProjectPreview.css';
 
-const ProjectPreview : React.FC<{ title : string, source : string, infoLink : string, projectLink : string }> = ({ title, source, infoLink, projectLink }) => {
+const ProjectPreview : React.FC<ProjectDataEntry> = (props) => {
     return (
         <div className="project-preview-container">
-            <CleanImage source={source} blur={true}/>
+            <CleanImage source={props.previewAsset} blur={true}/>
             <div className="project-preview-overlay">
                 <div style={{ display : "flex", flexDirection : "column" }}>
-                    <IonLabel color="primary">{title}</IonLabel>
-                    <IonButton routerDirection="forward" routerLink={infoLink} fill="solid">
+                    <IonLabel color="primary">{props.title}</IonLabel>
+                    <IonButton routerDirection="forward" routerLink={props.infoLink} fill="solid">
                         View Info
                     </IonButton>
-                    <IonButton routerDirection="forward" href={projectLink} fill="solid" color="secondary">
-                        Visit {title}
-                    </IonButton>
+                    {(props.projectLink)?
+                        <IonButton routerDirection="forward" href={props.projectLink} fill="solid" color="secondary">
+                            Visit {props.title}
+                        </IonButton>
+                    :null}
                 </div>
             </div>
         </div>
