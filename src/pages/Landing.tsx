@@ -9,7 +9,7 @@ import './Landing.css';
 const Landing : React.FC = () => (
     <Template title="Samuel Shoemaker">
         <div className="landing-top">
-            <CleanImage source={appData.landingImage}/>
+            <CleanImage source={"/assets/landing-image.jpg"}/>
         </div>
         <div className="landing-page-splitter">
             <Brand visible={true} size={78}/>

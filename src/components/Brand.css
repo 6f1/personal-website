@@ -1,6 +1,7 @@
 .brand-container {
     width: 32px;
     height: 32px;
+    z-index: 1;
 }
 
 .brand-container .img {

@@ -1,6 +1,7 @@
 .landing-top {
     height: 75%;
     width: 100%;
+    filter: drop-shadow(4px);
 }
 
 .landing-page-splitter {

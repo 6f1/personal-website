@@ -13,11 +13,11 @@ const ProjectPreview : React.FC<ProjectDataEntry> = (props) => {
                     <IonButton routerDirection="forward" routerLink={props.infoLink} fill="solid">
                         View Info
                     </IonButton>
-                    {(props.projectLink)?
+                    {(props.projectLink) ? (
                         <IonButton routerDirection="forward" href={props.projectLink} fill="solid" color="secondary">
                             Visit {props.title}
                         </IonButton>
-                    :null}
+                    ) : null }
                 </div>
             </div>
         </div>
@@ -25,3 +25,4 @@ const ProjectPreview : React.FC<ProjectDataEntry> = (props) => {
 };
 
 export default ProjectPreview;
+// "A real YouTube alternative. Upload a video and become a creator today!"
