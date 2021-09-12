@@ -4,8 +4,8 @@ import { AppData } from './types/Data';
 const appData : AppData = {
     /* landing page data */
     landingImage : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    landingText : "Relative diplomat disaster compete aluminium cunning. Pier reach whip presentation rich loss prey. Skilled quote overeat carry grudge able. Presidency residence ambiguity zero helicopter. Kill bald sweep assault bat maze. Sleep as battlefield team housing. Entry reluctance penalty specimen clear tidy coincide. Instrument accent medicine minority exclude swipe lonely premium.",
-    resumeLink : "/resume.txt",
+    landingText : `Conceptualized, built, and led the small team at ProtoPlay: a YouTube alternative for small creators.`,
+    resumeLink : "/SamuelShoemaker.pdf",
     /* page footer data */
     externalLinks : [
         {
@@ -45,7 +45,7 @@ const appData : AppData = {
         },
         {
             title : "Graphic Design",
-            description : "",
+            description : "Created some Sci-Fi assets for a personal project. Gained experience in Blender and VFX.",
             previewAsset : "/assets/projects/design-preview.jpg",
             bannerAsset : "",
             infoLink : "/projects/design",

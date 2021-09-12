@@ -1,10 +1,10 @@
-import { IonPage, IonHeader, IonToolbar, IonContent, IonTitle, IonRouterLink, IonButtons, IonBackButton } from '@ionic/react';
+import { IonPage, IonHeader, IonToolbar, IonContent, IonTitle, IonRouterLink, IonButtons, IonBackButton, IonFooter, isPlatform } from '@ionic/react';
 import Brand from '../components/Brand';
 import ThemeControl from '../components/ThemeControl';
 import PageFooter from '../components/PageFooter';
 import './Template.css';
 
-const Template : React.FC<{ title : string }> = ({ title, children }) => (
+const Template : React.FC<{ title : string, children : React.ReactNode }> = ({ title, children }) => (
     <IonPage>
         <IonHeader>
             <IonToolbar>
@@ -21,7 +21,7 @@ const Template : React.FC<{ title : string }> = ({ title, children }) => (
                 </div>
             </IonToolbar>
         </IonHeader>
-        <IonContent fullscreen forceOverscroll={true}>
+        <IonContent fullscreen forceOverscroll={true} className="ion-margin">
             <IonHeader collapse="condense" translucent={true}>
                 <IonToolbar>
                     <IonTitle size="large" color="primary">{ title }</IonTitle>
@@ -29,8 +29,13 @@ const Template : React.FC<{ title : string }> = ({ title, children }) => (
                 </IonToolbar>
             </IonHeader>
             { children }
+            <div className="s-pagefooter">
+                <PageFooter/>
+            </div>
         </IonContent>
-        <PageFooter />
+        <div className="l-pagefooter">
+            <PageFooter/>
+        </div>
     </IonPage>
 );
 

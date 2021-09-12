@@ -75,17 +75,17 @@ body {
 /* dark theme */
 body.dark {
     /* background colors */
-    --ion-p-background-color: #022F40;
+    --ion-p-background-color: #1f1511;
     --ion-p-background-color-rgb: 2, 47, 64;
     --ion-p-background-text-color: #ffffff;
     --ion-p-background-text-color-rgb: 255, 255, 255;
 
-    --ion-s-background-color: #183446;
+    --ion-s-background-color: #36251f;
     --ion-s-background-color-rgb: 24, 52, 70;
     --ion-s-background-text-color: #ffffff;
     --ion-s-background-text-color-rgb: 255, 255, 255;
 
-    --ion-t-background-color: #0F202B;
+    --ion-t-background-color: #2A1D18;
     --ion-t-background-color-rgb: 15, 32, 43;
     --ion-t-background-text-color: #ffffff;
     --ion-t-background-text-color-rgb: 255, 255, 255;

@@ -9,7 +9,7 @@ import './Landing.css';
 const Landing : React.FC = () => (
     <Template title="Samuel Shoemaker">
         <div className="landing-top">
-            <CleanImage source={"/assets/landing-image.jpg"}/>
+            <CleanImage source={"/assets/background-2.jpeg"} blur={true}/>
         </div>
         <div className="landing-page-splitter">
             <Brand visible={true} size={78}/>
@@ -20,7 +20,7 @@ const Landing : React.FC = () => (
                 <div className="a-inner-two">
                     <IonText>{ appData.landingText }</IonText>
                     <div className="button-container">
-                        <IonButton fill="outline" href={appData.resumeLink} download="resume.txt">
+                        <IonButton fill="outline" href={appData.resumeLink} download="SamuelShoemaker.pdf">
                             {"Résumé"}
                             <IonIcon icon={download}/>
                         </IonButton>

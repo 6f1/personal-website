@@ -5,3 +5,21 @@
 .md.plt-mobile .toolbar-inner-container ion-buttons:not(.invisible) ~ .brand-header-container {
     display: none;
 }
+
+.s-pagefooter {
+    display: block;
+}
+
+.l-pagefooter {
+    display: none;
+}
+
+@media screen and ( min-height : 720px ) {
+    .s-pagefooter {
+        display: none;
+    }
+
+    .l-pagefooter {
+        display: block;
+    }
+}

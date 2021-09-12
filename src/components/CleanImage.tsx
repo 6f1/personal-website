@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './CleanImage.css';
 
-const CleanImage : React.FC<{ source : string, size? : { x : number, y : number }, blur? : boolean}> = ({ source, size, blur }) => {
+const CleanImage : React.FC<{ source : string, size? : { x : number, y : number }, blur? : boolean }> = ({ source, size, blur }) => {
     const [ shouldDisplay, setShouldDisplay ] = useState(false);
     return (
         <div className="clean-image-container">
