@@ -45,15 +45,15 @@ const appData : AppData = {
         },
         {
             title : "Graphic Design",
-            description : "Created some Sci-Fi assets for a personal project. Gained experience in Blender and VFX.",
+            description : "I created some Sci-Fi assets for a personal project. Gained experience in Blender and VFX.",
             previewAsset : "/assets/projects/design-preview.jpg",
             bannerAsset : "",
             infoLink : "/projects/design",
             workEntries : [
                 {
                     previewAsset : "",
-                    title : "",
-                    description : ""
+                    title : "Planet creation",
+                    description : "I used blender to create planets from scratch."
                 }
             ]
         }

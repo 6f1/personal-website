@@ -1,6 +1,7 @@
 .clean-image-container {
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .fake-img {
@@ -23,4 +24,6 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-size: cover;
+    background-position: center;
 }
