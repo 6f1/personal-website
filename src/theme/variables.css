@@ -6,14 +6,14 @@ http://ionicframework.com/docs/theming/ */
     /* default fonts */
     --ion-default-font: "LexendPeta", "Roboto", "Helvetica Neue", sans-serif !important;
 
-    --ion-color-primary: #FC8BDE;
+    --ion-color-primary: #07d3d9;
     --ion-color-primary-rgb: 252, 139, 222;
     --ion-color-primary-contrast: #000000;
     --ion-color-primary-contrast-rgb: 0,0,0;
     --ion-color-primary-shade: #FC72D7;
     --ion-color-primary-tint: #FCA4E6;
 
-    --ion-color-secondary: #6F00C4;
+    --ion-color-secondary: #960520;
     --ion-color-secondary-rgb: 111, 0, 196;
     --ion-color-secondary-contrast: #ffffff;
     --ion-color-secondary-contrast-rgb: 255,255,255;
@@ -75,18 +75,18 @@ body {
 /* dark theme */
 body.dark {
     /* background colors */
-    --ion-p-background-color: #1f1511;
-    --ion-p-background-color-rgb: 2, 47, 64;
+    --ion-p-background-color: #02202b;
+    --ion-p-background-color-rgb: 2, 32, 43;
     --ion-p-background-text-color: #ffffff;
     --ion-p-background-text-color-rgb: 255, 255, 255;
 
-    --ion-s-background-color: #36251f;
-    --ion-s-background-color-rgb: 24, 52, 70;
+    --ion-s-background-color: #032c3b;
+    --ion-s-background-color-rgb: 3, 44, 59;
     --ion-s-background-text-color: #ffffff;
     --ion-s-background-text-color-rgb: 255, 255, 255;
 
-    --ion-t-background-color: #2A1D18;
-    --ion-t-background-color-rgb: 15, 32, 43;
+    --ion-t-background-color: #032c3b;
+    --ion-t-background-color-rgb: 3, 44, 59;
     --ion-t-background-text-color: #ffffff;
     --ion-t-background-text-color-rgb: 255, 255, 255;
 }

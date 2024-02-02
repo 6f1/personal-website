@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import Landing from './pages/Landing';
 import Projects from './pages/Projects';
 import ProjectInfo from './pages/ProjectInfo';
@@ -30,6 +30,8 @@ import './theme/variables.css';
 /* Additional fonts */
 import './fonts/lexend-peta/lexend-peta.css';
 
+export const ThemeContext = createContext('dark');
+
 const App: React.FC = () => {
     /* Themeing system logic */
     const [ selectedTheme, setSelectedTheme ] = useState('dark');
@@ -56,28 +58,30 @@ const App: React.FC = () => {
         setSelectedTheme(theme);
     };
     (window as any).getCurrentTheme = () => selectedTheme;
-
+    console.log(selectedTheme);
     return (
-        <IonApp>
-            <IonReactRouter>
-                <IonRouterOutlet>
-                    <Route exact path="/">
-                        <Landing />
-                    </Route>
-                    <Route exact path="/projects">
-                        <Projects/>
-                    </Route>
-                    {appData.projectData.map((project) => (
-                        <Route exact path={project.infoLink} key={project.infoLink}>
-                            <ProjectInfo {...project}/>
+        <ThemeContext.Provider value={selectedTheme}>
+            <IonApp>
+                <IonReactRouter>
+                    <IonRouterOutlet>
+                        <Route exact path="/">
+                            <Landing />
                         </Route>
-                    ))}
-                    <Route>
-                        <Redirect to="/" />
-                    </Route>
-                </IonRouterOutlet>
-            </IonReactRouter>
-        </IonApp>
+                        <Route exact path="/projects">
+                            <Projects/>
+                        </Route>
+                        {appData.projectData.map((project) => (
+                            <Route exact path={project.infoLink} key={project.infoLink}>
+                                <ProjectInfo {...project}/>
+                            </Route>
+                        ))}
+                        <Route>
+                            <Redirect to="/" />
+                        </Route>
+                    </IonRouterOutlet>
+                </IonReactRouter>
+            </IonApp>
+        </ThemeContext.Provider>
     );
 };
 
