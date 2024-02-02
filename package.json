@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false GENERATE_SOURCEMAPS=false react-scripts build",
+    "build": "CI=false GENERATE_SOURCEMAPS=false BUILD_PATH=docs react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -55,13 +55,13 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.7",
-    "@ionic/cli": "^6.14.1",
+    "@ionic/cli": "6.20.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.23",
     "@types/node": "^12.20.13",
-    "react-scripts": "^4.0.2",
+    "react-scripts": "4.0.3",
     "web-vitals": "^0.2.4"
   },
   "description": "Samuel Shoemaker's personal website"
