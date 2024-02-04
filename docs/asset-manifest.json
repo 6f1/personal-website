@@ -3,8 +3,8 @@
     "static/js/0.e16bb9b5.chunk.js": "https://6f1.github.io/personal-website/static/js/0.e16bb9b5.chunk.js",
     "static/js/0.e16bb9b5.chunk.js.map": "https://6f1.github.io/personal-website/static/js/0.e16bb9b5.chunk.js.map",
     "main.css": "https://6f1.github.io/personal-website/static/css/main.891b80ab.chunk.css",
-    "main.js": "https://6f1.github.io/personal-website/static/js/main.a7f1d42a.chunk.js",
-    "main.js.map": "https://6f1.github.io/personal-website/static/js/main.a7f1d42a.chunk.js.map",
+    "main.js": "https://6f1.github.io/personal-website/static/js/main.2db88c7e.chunk.js",
+    "main.js.map": "https://6f1.github.io/personal-website/static/js/main.2db88c7e.chunk.js.map",
     "polyfills-dom.js": "https://6f1.github.io/personal-website/static/js/polyfills-dom.2ced6d9d.chunk.js",
     "polyfills-dom.js.map": "https://6f1.github.io/personal-website/static/js/polyfills-dom.2ced6d9d.chunk.js.map",
     "runtime-main.js": "https://6f1.github.io/personal-website/static/js/runtime-main.ef80a80e.js",
@@ -135,6 +135,6 @@
     "static/css/4.7885e079.chunk.css",
     "static/js/4.4aca119e.chunk.js",
     "static/css/main.891b80ab.chunk.css",
-    "static/js/main.a7f1d42a.chunk.js"
+    "static/js/main.2db88c7e.chunk.js"
   ]
 }
