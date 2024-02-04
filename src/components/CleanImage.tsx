@@ -7,7 +7,7 @@ const CleanImage : React.FC<{ source : string, size? : { x : number, y : number 
         <div 
             className="clean-image-img" 
             style={{ 
-                backgroundImage : `url("/personal-website/${source}")`, 
+                backgroundImage : `url("${source}")`, 
                 filter : (blur ? "blur(4px)" : undefined), 
                 transform : (blur ? "scale(1.05)" : undefined) 
             }}

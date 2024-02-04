@@ -15,7 +15,7 @@ const Landing : React.FC = () => {
         <Template title="Samuel Shoemaker">
             <div className="landing-top">
                 <CleanImage 
-                    source={theme === 'dark' ? "/assets/backgrounds/pexels-irina-iriser-1366957.jpg" : "/assets/backgrounds/pexels-aleksandar-pasaric-325185.jpg"}
+                    source={theme === 'dark' ? "/personal-website/assets/backgrounds/pexels-irina-iriser-1366957.jpg" : "/personal-website/assets/backgrounds/pexels-aleksandar-pasaric-325185.jpg"}
                 />
             </div>
             <div className="landing-page-splitter">
@@ -27,11 +27,11 @@ const Landing : React.FC = () => {
                     <div className="a-inner-two">
                         <IonText style={{ whiteSpace: 'pre-line' }}>{ appData.landingText }</IonText>
                         <div className="button-container">
-                            <IonButton fill="outline" href={appData.resumeLink} download="SamuelShoemaker.docx">
+                            <IonButton fill="outline" href={`/personal-website/${appData.resumeLink}`} download="SamuelShoemaker.docx">
                                 {"Résumé"}
                                 <IonIcon icon={download}/>
                             </IonButton>
-                            <IonButton fill="outline" color="tertiary" routerLink="/projects" href="/projects">
+                            <IonButton fill="outline" color="tertiary" routerLink="/personal-website/projects" href="/projects">
                                 {"Projects"}
                                 <IonIcon icon={briefcase}/>
                             </IonButton>
