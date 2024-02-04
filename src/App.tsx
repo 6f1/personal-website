@@ -64,7 +64,7 @@ const App: React.FC = () => {
             <IonApp>
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route exact path="/">
+                        <Route exact path="/personal-website/">
                             <Landing />
                         </Route>
                         <Route exact path="/projects">
@@ -76,7 +76,7 @@ const App: React.FC = () => {
                             </Route>
                         ))}
                         <Route>
-                            <Redirect to="/" />
+                            <Redirect to="/personal-website/" />
                         </Route>
                     </IonRouterOutlet>
                 </IonReactRouter>
