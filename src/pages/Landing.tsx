@@ -27,11 +27,11 @@ const Landing : React.FC = () => {
                     <div className="a-inner-two">
                         <IonText style={{ whiteSpace: 'pre-line' }}>{ appData.landingText }</IonText>
                         <div className="button-container">
-                            <IonButton fill="outline" href={`/personal-website/${appData.resumeLink}`} download="SamuelShoemaker.docx">
+                            <IonButton fill="outline" href={appData.resumeLink} download="SamuelShoemaker.docx">
                                 {"Résumé"}
                                 <IonIcon icon={download}/>
                             </IonButton>
-                            <IonButton fill="outline" color="tertiary" routerLink="/personal-website/projects" href="/projects">
+                            <IonButton fill="outline" color="tertiary" routerLink="/personal-website/projects" href="/personal-website/projects">
                                 {"Projects"}
                                 <IonIcon icon={briefcase}/>
                             </IonButton>

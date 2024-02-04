@@ -9,11 +9,11 @@ const Template : React.FC<{ title : string, children : React.ReactNode }> = ({ t
         <IonHeader>
             <IonToolbar>
                 <div className="toolbar-inner-container">
-                    <IonButtons className={(window.location.pathname !== "/" ? undefined : 'invisible')}>
-                        <IonBackButton defaultHref="/"/>
+                    <IonButtons className={(!["/personal-website",'/personal-website/','/'].includes(window.location.pathname) ? undefined : 'invisible')}>
+                        <IonBackButton defaultHref="/personal-website"/>
                     </IonButtons>
-                    <div className={"brand-header-container" + ( window.location.pathname !== "/" ? ' ios-invisible' : '' )}>
-                        <IonRouterLink href="/" routerLink="/" routerDirection="back">
+                    <div className={"brand-header-container" + (!["/personal-website",'/personal-website/','/'].includes(window.location.pathname) ? ' ios-invisible' : '' )}>
+                        <IonRouterLink href="/personal-website" routerLink="/personal-website" routerDirection="back">
                             <Brand visible={true}/>
                         </IonRouterLink>
                     </div>

@@ -7,7 +7,7 @@ const appData : AppData = {
     landingText : `As the driving force­ behind ProtoPlay - a YouTube alternative­ for small creators, I championed the­ conceptualization, construction, and leadership of a small te­am showcasing my ability to navigate complex challenges and deliver innovative solutions. With experience in building web, mobile web, and app frontends using a wide range of technologies, I have a proven track record of developing, publishing, and adapting solutions to dynamic environments. During my time at Youreka, I have continued to work as a part of a team, and continued to improve and learn new skills to advance my skillset. I not only focus on planning, and architecting solutions, but also on performance and improving myself and past solutions made.
 
 In the long term, I’m committed to staying updated with industry trends, pursuing relevant certifications, and taking on challenging projects that allow me to grow both professionally and personally. Furthermore, I would like to take on more leadership and management roles to contribute to the growth and development of the teams that I am a part of. I believe that my problem-solving and communication skills are invaluable when leading a team.`,
-    resumeLink : "/Samuel Shoemaker.docx",
+    resumeLink : "/personal-website/Samuel Shoemaker.docx",
     /* page footer data */
     externalLinks : [
         {
@@ -28,10 +28,10 @@ In the long term, I’m committed to staying updated with industry trends, pursu
         {
             title : "ProtoPlay",
             description : "A YouTube alternative platform.",
-            previewAsset : "/assets/projects/protoplay-preview.png",
-            bannerAsset : "/assets/projects/protoplay-banner.png",
+            previewAsset : "/personal-website/assets/projects/protoplay-preview.png",
+            bannerAsset : "/personal-website/assets/projects/protoplay-banner.png",
             projectLink : "https://protoplay.tv",
-            infoLink : "/projects/protoplay",
+            infoLink : "/personal-website/projects/protoplay",
             workEntries : [
                 {
                     previewAsset : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -57,9 +57,9 @@ In the long term, I’m committed to staying updated with industry trends, pursu
         {
             title : "Graphic Design",
             description : "I created some Sci-Fi assets for a personal project. Gained experience in Blender and VFX.",
-            previewAsset : "/assets/projects/design-preview.jpg",
+            previewAsset : "/personal-website/assets/projects/design-preview.jpg",
             bannerAsset : "",
-            infoLink : "/projects/design",
+            infoLink : "/personal-website/projects/design",
             workEntries : [
                 {
                     previewAsset : "",
