@@ -67,11 +67,11 @@ const App: React.FC = () => {
                         <Route exact path="/personal-website/">
                             <Landing />
                         </Route>
-                        <Route exact path="/projects">
+                        <Route exact path="/personal-website/projects">
                             <Projects/>
                         </Route>
                         {appData.projectData.map((project) => (
-                            <Route exact path={project.infoLink} key={project.infoLink}>
+                            <Route exact path={`/personal-website/${project.infoLink}`} key={project.infoLink}>
                                 <ProjectInfo {...project}/>
                             </Route>
                         ))}
